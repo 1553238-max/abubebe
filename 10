@@ -1,0 +1,9 @@
+num= float (input('введите число:'))
+step=2
+limit = num-step
+count= -step
+while count <limit:
+    count +=step
+    if count %12 ==0:
+        continue
+    print (count)

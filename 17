@@ -1,0 +1,6 @@
+data = 0 
+while data<100:
+    data +=2
+    if data % 40 == 0:
+        break
+print(data)

@@ -1,0 +1,23 @@
+import random # Подключаем модуль для генерации случайных чисел
+
+# Компьютер "загадывает" случайное число от 1 до 100
+number_to_guess = random.randint(1, 100)
+attempts = 0
+guess = None
+
+print("Я загадал число от 1 до 100. Попробуй угадать!")
+
+# Цикл продолжается, пока пользователь не угадает число
+while guess != number_to_guess:
+    guess_str = input("Введи своё число: ")
+    guess = int(guess_str)
+    attempts += 1 # Увеличиваем счётчик попыток
+
+    if guess < number_to_guess:
+        print("Слишком мало! Попробуй ещё раз.")
+    elif guess > number_to_guess:
+        print("Слишком много! Попробуй ещё раз.")
+
+# Когда цикл завершается, значит, число угадано
+print(f"Поздравляю, ты угадал! Это было число {number_to_guess}.")
+print(f"Тебе потребовалось {attempts} попыток.")
